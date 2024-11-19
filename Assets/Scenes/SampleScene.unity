@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 87881488}
   - component: {fileID: 87881487}
   - component: {fileID: 87881491}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 106899637}
   - component: {fileID: 106899636}
   - component: {fileID: 106899640}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -421,7 +421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 227938376}
   m_Layer: 0
-  m_Name: Pos2
+  m_Name: Pos1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 352776070}
   - component: {fileID: 352776069}
   - component: {fileID: 352776073}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -631,7 +631,7 @@ GameObject:
   m_Component:
   - component: {fileID: 498258066}
   m_Layer: 0
-  m_Name: Pos4
+  m_Name: Pos3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -666,7 +666,7 @@ GameObject:
   - component: {fileID: 619367822}
   - component: {fileID: 619367821}
   - component: {fileID: 619367825}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1130,7 +1130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1070202953}
   m_Layer: 0
-  m_Name: Pos3
+  m_Name: Pos2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1161,7 +1161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1147830534}
   m_Layer: 0
-  m_Name: Pos1
+  m_Name: Pos0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1334,7 +1334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196093109}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.504736, y: 2.46, z: -14.82}
+  m_LocalPosition: {x: 23.46, y: 2.46, z: -14.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1356,6 +1356,7 @@ GameObject:
   - component: {fileID: 1202073903}
   - component: {fileID: 1202073902}
   - component: {fileID: 1202073908}
+  - component: {fileID: 1202073909}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1523,6 +1524,32 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1202073909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202073901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8838f2542dffa54d9c7930e53f6cc99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1196093115}
+  detectionRange: 10
+  fieldOfView: 60
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 65
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  patrolPoints:
+  - {fileID: 1147830534}
+  - {fileID: 227938376}
+  - {fileID: 1070202953}
+  - {fileID: 498258066}
 --- !u!1 &1229045847
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,7 +1564,7 @@ GameObject:
   - component: {fileID: 1229045850}
   - component: {fileID: 1229045849}
   - component: {fileID: 1229045853}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1681,7 +1708,7 @@ GameObject:
   - component: {fileID: 1336200814}
   - component: {fileID: 1336200813}
   - component: {fileID: 1336200817}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1825,7 +1852,7 @@ GameObject:
   - component: {fileID: 1513775573}
   - component: {fileID: 1513775572}
   - component: {fileID: 1513775576}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2009,7 +2036,7 @@ GameObject:
   - component: {fileID: 1635964144}
   - component: {fileID: 1635964143}
   - component: {fileID: 1635964147}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2153,7 +2180,7 @@ GameObject:
   - component: {fileID: 2142781229}
   - component: {fileID: 2142781228}
   - component: {fileID: 2142781232}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
