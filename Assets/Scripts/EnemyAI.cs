@@ -28,6 +28,13 @@ public class EnemyAI : MonoBehaviour
 
     [SerializeField]
     private Transform[] patrolPoints; // Puntos de patrullaje
+
+
+    private Renderer enemyRenderer; // Renderer del enemigo
+    public Color patrolColor = Color.blue; // Color para patrullaje
+    public Color chaseColor = Color.red; // Color para persecución
+    public Color searchColor = Color.yellow; // Color para búsqueda
+
     private int currentPatrolIndex = 0;
 
 
@@ -35,7 +42,17 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        enemyRenderer = GetComponent<Renderer>(); // Obtiene el Renderer del enemigo
+        ChangeColor(patrolColor); // Establece el color inicial
         GoToNextPatrolPoint();
+    }
+
+    private void ChangeColor(Color newColor)
+    {
+        if (enemyRenderer != null)
+        {
+            enemyRenderer.material.color = newColor;
+        }
     }
 
     void Update()
@@ -130,15 +147,18 @@ public class EnemyAI : MonoBehaviour
 
             case EnemyState.PATROL:
                 agent.isStopped = false;
+                ChangeColor(patrolColor);
                 GoToNextPatrolPoint();
                 break;
             
             case EnemyState.CHASE:
                 agent.isStopped = false;
+                ChangeColor(chaseColor);
                 break;
 
             case EnemyState.SEARCH:
                 agent.isStopped = true;
+                ChangeColor(searchColor);
                 break;
         }
 
